@@ -11,9 +11,9 @@ else
     die("Please rename the config-sample.php file to config.php and add your App.net client id and secret to it\n");
 }
 
-require_once dirname(__FILE__) . '/DPZAppNet.php';
+require_once dirname(__DIR__) . '/src/DPZF/AppNet.php';
 
-$appNet = new DPZFAppNet($appNetClientId, $appNetClientSecret);
+$appNet = new \DPZF\AppNet($appNetClientId, $appNetClientSecret);
 
 $appNet->signout();
 

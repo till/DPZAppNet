@@ -16,7 +16,7 @@ else
  * `./composer.phar install`
  * require_once dirname(__DIR__) . '/vendor/autoload.php';
  */
-require_once dirname(__DIR__) . '/src/DPZ/AppNet.php';
+require_once dirname(__DIR__) . '/src/DPZF/AppNet.php';
 
 // We need to set up the callback for the authentication process - this must match the redirect URI set up for this
 // client id on app.net. For this example, the redirect uri must point at our example-auth.php script.

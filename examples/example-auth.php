@@ -11,7 +11,7 @@ else
     die("Please rename the config-sample.php file to config.php and add your App.net client id and secret to it\n");
 }
 
-require_once dirname(__FILE__) . '/DPZAppNet.php';
+require_once dirname(__DIR__) . '/src/DPZF/AppNet.php';
 
 // Build the URL for our callback
 $callback = sprintf('%s://%s%s%s/example-auth.php',
@@ -21,7 +21,7 @@ $callback = sprintf('%s://%s%s%s/example-auth.php',
     $appNetRedirectPathPrefix
     );
 
-$appNet = new DPZFAppNet($appNetClientId, $appNetClientSecret, $callback);
+$appNet = new \DPZF\AppNet($appNetClientId, $appNetClientSecret, $callback);
 
 if (!$appNet->authenticate('stream write_post'))
 {
